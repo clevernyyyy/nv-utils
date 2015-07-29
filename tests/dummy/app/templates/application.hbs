@@ -1,13 +1,7 @@
-<style>
-  .wrapper {
-    margin-left: 25px;
-  }
-</style>
-
 <div class="wrapper">
   <h1>UI Common Utilities</h1>
 
-  <div>
+  <div id="check-box">
     <h3>Check Box</h3>
     <div class="ember376 checkbox">
       <label>{{check-box checked=true}}
@@ -15,4 +9,13 @@
       </label>
     </div>
   </div>
+  <hr>
+  <div id="button">
+    <h3>Custom Button</h3>
+    <div class="button">
+        {{nv-button name="someName" value="someValue" action="someAction"}}
+        {{! Note:  The action logs to the console as a test }}
+    </div>
+  </div>
+
 </div>
