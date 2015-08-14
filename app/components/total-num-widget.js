@@ -1,0 +1,1 @@
+export { default } from 'nv-ui-utils/components/total-num-widget';

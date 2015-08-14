@@ -1,0 +1,68 @@
+// Tool tips, pop overs
+.popover-content {
+  cursor: default;
+}
+.help-mark {
+  color: @black;
+  border: 0;
+  background-color: transparent;
+}
+.help-mark:hover {
+  color: @black;
+  cursor: pointer;
+  text-decoration: none;
+}
+.tool-tip {
+  cursor: pointer;
+  margin-left: .5em;
+  display: inline-block;
+}
+// lists and quartile swatches for modals
+.list-group-sm {
+  margin-bottom: 0;
+  list-style-type: none;
+  padding-left: 0;
+}
+.list-group-item-sm {
+  border-bottom: 1px solid #ddd;
+  padding: 5px 10px 15px;
+  margin-bottom: 5px;
+  a {
+    color: @default-text-color;
+    text-decoration: none;
+    display: block;
+    &:hover, &:focus {
+      text-decoration: none;
+      color: @black;
+    }
+    span {
+      padding-right: 10px;
+    }
+  }
+  &:last-child {
+    margin-bottom: 0;
+    border: 0;
+  }
+}
+// Quartile swatches
+.quartile-25,
+.quartile-50,
+.quartile-75,
+.quartile-100 {
+  height: 14px;
+  width: 14px;
+  display: inline-block;
+  margin-right: 6px;
+}
+.quartile-25 {
+  background-color: @quartile-25;
+}
+.quartile-50 {
+  background-color: @quartile-50;
+}
+.quartile-75 {
+  background-color: @quartile-75;
+}
+.quartile-100 {
+  background-color: @quartile-100;
+}

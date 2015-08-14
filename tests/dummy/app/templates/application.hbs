@@ -3,7 +3,7 @@
 
   <div id="check-box">
     <h3>Check Box</h3>
-    <div class="ember376 checkbox">
+    <div class="checkbox">
       <label>{{check-box checked=true}}
         Checkbox 1
       </label>
@@ -13,9 +13,21 @@
   <div id="button">
     <h3>Custom Button</h3>
     <div class="button">
-        {{nv-button name="someName" value="someValue" action="someAction"}}
+        {{nv-button classes="btn-test-class" name="someName" value="someValue" action="someAction"}}
         {{! Note:  The action logs to the console as a test }}
     </div>
+  </div>
+  <hr>
+  <div id="link-li">
+    <h3>Link-li</h3>
+    <ul class="nav nav-tabs">
+      {{#link-li classes="my-class" role="presentation"}}
+        {{link-to "Edit Track" "track.edit"}}
+      {{/link-li}}
+      {{#link-li classes="my-class" role="presentation"}}
+        {{link-to "Edit Position" "track.position"}}
+      {{/link-li}}
+    </ul>
   </div>
 
 </div>

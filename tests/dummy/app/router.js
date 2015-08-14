@@ -6,6 +6,12 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+
+  this.route('track', function() {
+    this.route('edit');
+    this.route('position');
+  });
+
 });
 
 export default Router;

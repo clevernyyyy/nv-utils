@@ -1,0 +1,42 @@
+// Mixins (for paramaterized class definitions)
+
+// Border radius - default 2px
+.border-radius (@radius: 2px) {
+  border-radius: @radius;
+}
+
+// Drop shadows
+.box-shadow(@shadow) {
+  -webkit-box-shadow: @shadow;
+  -moz-box-shadow: @shadow;
+  box-shadow: @shadow;
+}
+
+// Requires inline-block or block for proper styling
+.text-overflow() {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+// Sizing shortcuts
+.size(@height, @width) {
+  width: @width;
+  height: @height;
+}
+.square(@size) {
+  .size(@size, @size);
+}
+
+// Button testing
+.transition (@transition: background .3s linear) {
+  -moz-transition: @transition;
+  -webkit-transition: @transition;
+  transition: @transition;
+}
+
+.custom(@bgcolor: #fff; @border: 2px solid #fff; @color: #000;) {
+  background-color: @bgcolor;
+  border: @border;
+  color: @color;
+}

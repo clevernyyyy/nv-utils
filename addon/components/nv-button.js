@@ -15,7 +15,8 @@ import layout from '../templates/components/nv-button';
   ```handlebars 
   {{nv-button action="awesomeAction" name="someName" value="someValue"}} 
   ```
-  
+  Note:  Testing the action is done in the console on the UI Dummy Page.
+
   ## Customizing the button. 
 
   ### Custom colors?

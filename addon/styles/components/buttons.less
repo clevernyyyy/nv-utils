@@ -1,0 +1,29 @@
+// Reporting buttons
+.reporting {
+  &-base {
+    .custom(@bgcolor:@ghost; @border:2px solid @r-3;@color:@r-1;);
+    &:hover,
+    &:focus {
+      .custom(@bgcolor:@r-0; @border:2px solid @r-0; @color:@white;);
+    }
+  }
+}
+.btn-primary-black {
+  .custom(@bgcolor:@btn-primary-action; @border:2px solid @ghost; @color:@white;);
+  &:hover, &:focus {
+    .custom(@bgcolor: @btn-primary-action-hover; @border:2px solid @ghost; @color:@white;);
+  }
+}
+.btn {
+  .transition;
+  text-shadow: none;
+  &:hover,
+  &:focus {
+    .transition;
+  }
+}
+
+.btn-test-class {
+  background-color: tan;
+  color: darkblue;
+}

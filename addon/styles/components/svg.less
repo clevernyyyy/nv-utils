@@ -1,0 +1,450 @@
+.chart-sm {
+  width: 15%;
+  min-width: 75px;
+  max-width: 150px;
+}
+.chart-square {
+  width: 500px;
+  height: 500px;
+}
+.chart-rectangle {
+  width: 500px;
+  height: 100px;
+}
+.bg-quartile0 {
+  fill: @black;
+  stroke: @black;
+}
+.bg-quartile1 {
+  fill: @quartile-25;
+  stroke: @quartile-25;
+}
+.bg-quartile2 {
+  fill: @quartile-50;
+  stroke: @quartile-50;
+}
+.bg-quartile3 {
+  fill: @quartile-75;
+  stroke: @quartile-75;
+}
+.bg-quartile4 {
+  fill: @quartile-100;
+  stroke: @quartile-100;
+}
+.bg-background-bar {
+  fill: @chart-gray;
+  stroke: @chart-gray;
+}
+.bg-background-html-bar {
+  background-color: @chart-gray;
+}
+.bg-html-quartile0 {
+  background-color: @black;
+}
+.bg-html-quartile1 {
+  background-color: @quartile-25;
+}
+.bg-html-quartile2 {
+  background-color: @quartile-50;
+}
+.bg-html-quartile3 {
+  background-color: @quartile-75;
+}
+.bg-html-quartile4 {
+  background-color: @quartile-100;
+}
+.bg-html-vertical-value {
+  display: block;
+}
+.bg-html-horizontal-value-label {
+  display: inline-block;
+  float: left;
+}
+.bg-html-vertical-label {
+  display: block;
+  float: left;
+}
+.bg-bar-label {
+  stroke: none;
+  fill: @black;
+}
+.bg-bar-value {
+  stroke: none;
+  fill: @black;
+}
+.bg-axis {
+  stroke: @black;
+}
+.axis path,
+.axis line {
+  fill: none;
+  stroke: @black;
+  shape-rendering: crispEdges;
+}
+.graph-title {
+  font-size: 1.875rem;
+  font-weight: bold;
+}
+.label-position-html {
+  position: relative;
+}
+.bg-html-vertical {
+  display: block;
+  float: left;
+}
+.bg-html-horizontal {
+  display: inline-block;
+}
+.sbgCategoryTooltip {
+  display: inline-block;
+  visibility: hidden;
+  position: fixed;
+  min-height: 5em;
+  color: #111;
+  border: solid 1px @chart-gray;
+  background: #fffAF0;
+  z-index: 10;
+  padding: .5em .5em;
+}
+.sbgGraphTitle {
+  font-size: 1.875rem;
+}
+.sbgBarStroke {
+  stroke: @black;
+}
+.sbgBarLabel {}
+.sbgCategoryLabel {
+  stroke: none;
+  fill: @black;
+}
+.sbgBarFill1 {
+  fill: @actively-disengaged;
+}
+.sbgBarFill2 {
+  fill: @not-engaged;
+}
+.sbgBarFill3 {
+  fill: @engaged;
+}
+.sbgBarBgColor1 {
+  background-color: @actively-disengaged;
+}
+.sbgBarBgColor2 {
+  background-color: @not-engaged;
+}
+.sbgBarBgColor3 {
+  background-color: @engaged;
+}
+.stackedBars {
+  padding-left: 0px;
+  display: inline-block;
+  float: left;
+}
+.stackedBarsHorizontal {
+  padding-left: 0px;
+  display: block;
+}
+.verticalSbgBarLabel {
+  text-align: right;
+  width: 100%;
+  display: block;
+  position: relative;
+  top: 50%;
+}
+.horizontalSbgBarLabel {
+  display: block;
+  position: relative;
+  top: 50%;
+  left: 50%;
+}
+.sbgBarSection {
+  display: inline-block;
+  float: left;
+}
+// keep summary bar graph under control
+.measure-container.percentile-rank > div {
+  height: 22px;
+}
+// Meaninful change
+.positive {
+  color: @positive-change;
+  font-size: @font-size-small;
+}
+.negative {
+  color: @negative-change;
+  font-size: @font-size-small;
+}
+.neutral {
+  color: @neutral-change;
+  font-size: @font-size-small;
+}
+// Editable content
+editable-content {
+  input.edit-content {
+    height: initial;
+    margin: 0;
+    min-height: initial;
+    padding: 0 6px;
+  }
+  .processing {
+    display: inline-block;
+  }
+  .static-content {
+    border: 1px solid transparent;
+    .border-radius;
+    color: #595b5c;
+    cursor: pointer;
+    height: 20px;
+    line-height: @line-height-base;
+    padding: 0 6px;
+    vertical-align: middle;
+  }
+  .static-content:hover {
+    border: 1px solid #dddddd;
+  }
+}
+
+.vertical-parent {
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+.vertical-align {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.stacked-svg {
+  overflow: visible;
+  min-height: 200px;
+  .light-black-line {
+    stroke: rgba(0, 0, 0, 0.3);
+  }
+  .end-text {
+    text-anchor: end;
+  }
+  .rect-label {
+    font-size: 0.8rem;
+  }
+  .middle-text {
+    text-anchor: middle;
+  }
+  .start-text {
+    text-anchor: start;
+  }
+  svg {
+    overflow: visible;
+  }
+
+  .graph-bottom {
+    * {
+      font-size: 0.8rem;
+    }
+  }    
+
+  &.horizontal {
+    .graph-svg text {
+      font-size: 0.8rem;
+    }
+  }
+}
+.stacked-html {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 200px;
+  .graph-bottom {
+    position: absolute;
+    top: 85%;
+    height: 15%;
+    text-align: center;
+    * {
+      font-size: 0.8rem;
+    }
+
+    .bar-label-container {
+      position: absolute;    
+      height: 100%;
+
+      div {
+        position: relative;
+        height: 50%;
+        text-align: center;
+
+        span {
+          position: absolute;                  
+          display: block;
+          margin: 0 auto;
+          left: 0;
+          right: 0;
+
+          &.main-label {
+            bottom: 0px;
+          }
+
+          &.sub-label {
+            top: 0px;
+          }
+        }
+      }     
+    }
+  }
+  .ruler-label-container {
+    position: absolute;
+    width: 10%;
+    top: 5%;
+    height: 80%;
+    .ruler-label {
+      position: absolute;
+      width: 100%;
+      text-align: right;
+    }
+  }
+  .graph-html {
+    position: absolute;
+    top: 5%;
+    height: 80%;
+    &.ruled {
+      border-left: 1px solid rgba(0, 0, 0, 0.3);
+    }
+    hr {
+      position: absolute;
+      border: 1px solid rgba(0, 0, 0, 0.3);
+      width: 100%;
+      margin: 0px;
+    }
+    .rect-label {
+      font-size: 0.8rem;
+    }
+    .bar-container {
+      position: absolute;
+      height: 100%;
+      .bar-div {
+        position: absolute;
+        width: 100%;
+        bottom: 0%;
+        .rect-div {
+          position: absolute;
+          width: 70%;
+          left: 30%;
+          height: 100%;
+        }
+        .rect-label {
+          position: absolute;
+          width: 30%;
+          height: 100%;
+          text-align: right;
+        }
+      }
+    }
+  }
+  &.vertical {
+    .bar-div .rect-label {
+      .vertical-parent();
+
+      div {
+        .vertical-align();
+      } 
+    }
+  }
+  &.horizontal {
+    * {
+      position: relative;
+    }
+    .line-div {
+      position: absolute;
+      width: 1px;
+      border-left: 1px solid rgba(0, 0, 0, 0.3);
+      height: 100%;
+    }
+    .bottom-text {
+      position: absolute;
+      bottom: 0px;
+    }
+    .ruler-label-container {
+      position: absolute;
+      width: 90%;
+      top: 5%;
+      left: 2%;
+      height: 10%;
+      .ruler-label {
+        position: absolute;
+        width: auto;
+        text-align: left;
+      }
+    }
+    .graph-html {
+      position: absolute; 
+      left:2%;
+      width: 90%;
+      font-size: 0.8rem;
+      &.ruled{
+        border-top:1px solid rgba(0, 0, 0, 0.3);                  
+      }
+      .ruler-container {
+        height: 100%;
+      }
+      .bar-container {
+        width: 100%;
+        .bar-rect-container {
+          height: 70%;
+          .bar-div {
+            position: absolute;
+            height: 100%;
+            .rect-label {
+              position: relative;
+              text-align: center;
+              height: 50%;
+              width: 100%;
+            }
+            .rect-div {
+              position: relative;
+              height: 50%;
+              width: 100%;
+              left: 0%;
+            }
+          }
+        }
+        .bar-label-container {
+          text-align: left;
+        }
+      }
+    }
+  }
+}
+.stacked-bar-graph2 {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  .rect-label {
+    &, * {
+      font-weight: bold;
+    }
+  }
+  .bar-container .cat-0 {
+    &.rect-svg {
+      fill: @leader-green;
+    }
+    &.rect-div {
+      background-color: @leader-green;
+    }
+  }
+  .bar-container .cat-1 {
+    &.rect-svg {
+      fill: #DDDDDD;
+    }
+    &.rect-div {
+      background-color: #DDDDDD;
+    }
+  }
+  .bar-container .cat-2 {
+    &.rect-svg {
+      fill: #555555;
+    }
+    &.rect-div {
+      background-color: #555555;
+    }
+  }
+}
